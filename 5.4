@@ -1,0 +1,12 @@
+import random
+
+a = ["Трусова","Крупницкий","Прохоренкова","Мигунов","Веселова"]
+b = ["Иванов","Башлыкова","Калашникова","Егорова","Белоцерковский"]
+d = tuple(random.sample(a, 5)[:3]+random.sample(b, 5)[:2])
+d1 = tuple(sorted(list(d)))
+print(*a)
+print(*b)
+print(d)
+print(*d1)
+if "Иванов" in d: print("Ивановых в команде: ", d.count("Иванов"))
+else: print ("Иванова нет")
